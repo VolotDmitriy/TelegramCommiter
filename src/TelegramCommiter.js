@@ -5,9 +5,6 @@ const logger = require("./utils/logger");
 const app = express();
 app.use(express.json());
 
-const TELEGRAM_BOT_TOKEN = "7894563183:AAGhVFhM8s5qce6Zb6F_pgNvG4iWMs-xrhs";
-const CHAT_ID = "-1002367299235";
-
 app.use(logger);
 
 app.post("/", async (req, res) => {
@@ -22,8 +19,8 @@ app.post("/", async (req, res) => {
 🔹 *Сообщение:* ${commit.message}  
 🔹 [Посмотреть коммит](${commit.url})`;
 
-    await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-        chat_id: CHAT_ID,
+    await axios.post(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        chat_id: process.env.CHAT_ID,
         text: message,
         parse_mode: "Markdown"
     });

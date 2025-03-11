@@ -8,6 +8,9 @@
     "express": "^4.21.2"
   },
   "scripts": {
-    "telegram" : "node src/TelegramCommiter.js"
+    "telegram": "node src/TelegramCommiter.js"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
   }
 }
