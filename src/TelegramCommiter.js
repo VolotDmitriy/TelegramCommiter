@@ -7,7 +7,7 @@ app.use(express.json());
 const TELEGRAM_BOT_TOKEN = "7894563183:AAGhVFhM8s5qce6Zb6F_pgNvG4iWMs-xrhs";
 const CHAT_ID = "-1002367299235";
 
-app.post("/webhook", async (req, res) => {
+app.post("/", async (req, res) => {
     const commit = req.body.head_commit;
     if (!commit) return res.sendStatus(400);
 
