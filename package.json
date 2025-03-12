@@ -8,9 +8,11 @@
     "express": "^4.21.2"
   },
   "scripts": {
-    "telegram": "node src/TelegramCommiter.js"
+    "telegram": "node src/TelegramCommiter.js",
+    "start": "yarn netlify dev"
   },
   "devDependencies": {
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "netlify-cli": "^19.0.2"
   }
 }
